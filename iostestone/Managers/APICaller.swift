@@ -2,7 +2,13 @@ import Alamofire
 import Foundation
 
 struct Constants {
-    static let API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMjJhYzM4NzU0YjcxNThkNWU0M2MwMjE3NzMxMGM5YiIsIm5iZiI6MTc0NjEzMDY2Ny4yNiwic3ViIjoiNjgxM2Q2ZWI0M2E2MmY4NjVmZTAyODM2Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.AoboCOD0YYmtzRJSOCwhicS9jxLaymWoHQwVvCck1dA"
+    static let API_KEY: String = {
+        guard let rawApiKey = Bundle.main.infoDictionary?["API_KEY"] as? String?,
+              let apiKey = rawApiKey else {
+            preconditionFailure("API_KEY cannot be nil")
+        }
+        return apiKey
+    }()
     static let baseURL = "https://api.themoviedb.org/3/"
 }
 
@@ -14,6 +20,8 @@ class APICaller {
     static let shared = APICaller()
     
     func getDiscoverMovies(with page: Int, completion: @escaping (Result<[DiscoverMovieResult], Error>) -> Void) {
+        print("Constants.API_KEY")
+        print(Constants.API_KEY)
         let url = "\(Constants.baseURL)discover/movie"
         let headers: HTTPHeaders = [
             "accept": "application/json",

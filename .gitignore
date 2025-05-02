@@ -78,6 +78,9 @@ DerivedData/
 
 build/
 pods/
+env-debug.xcconfig
+env-release.xcconfig
+env.xcconfig
 
 
 #####
