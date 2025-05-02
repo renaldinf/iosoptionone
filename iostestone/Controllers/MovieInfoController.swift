@@ -1,10 +1,9 @@
 import UIKit
 import WebKit
 
-class TitlePreviewViewController: UIViewController {
+class MovieInfoController: UIViewController {
 
     private let titleLabel: UILabel = {
-       
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
@@ -14,7 +13,6 @@ class TitlePreviewViewController: UIViewController {
     }()
     
     private let overviewLabel: UILabel = {
-        
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 18, weight: .regular)
@@ -23,23 +21,34 @@ class TitlePreviewViewController: UIViewController {
         return label
     }()
     
-    private let downloadButton: UIButton = {
-    
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .red
-        button.setTitle("Download", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8
-        button.layer.masksToBounds = true
-        return button
-    }()
-    
     private let webView: WKWebView = {
-        
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false
         return webView
+    }()
+    
+    private let ratingLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 16, weight: .medium)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let starRatingLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .systemYellow
+        label.font = .systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var ratingView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.starRatingLabel, self.ratingLabel])
+        stack.axis = .horizontal
+        stack.spacing = 8
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
     }()
     
     override func viewDidLoad() {
@@ -49,7 +58,7 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(webView)
         view.addSubview(titleLabel)
         view.addSubview(overviewLabel)
-        view.addSubview(downloadButton)
+        view.addSubview(ratingView)
         
         configureConstraints()
     }
@@ -74,24 +83,29 @@ class TitlePreviewViewController: UIViewController {
             overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ]
         
-        let downloadButtonConstraints = [
-            downloadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            downloadButton.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 25),
-            downloadButton.widthAnchor.constraint(equalToConstant: 140),
-            downloadButton.heightAnchor.constraint(equalToConstant: 40)
+        let ratingViewConstraints = [
+            ratingView.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 10),
+            ratingView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
         ]
         
         NSLayoutConstraint.activate(webViewConstraints)
         NSLayoutConstraint.activate(titleLabelConstraints)
         NSLayoutConstraint.activate(overviewLabelConstraints)
-        NSLayoutConstraint.activate(downloadButtonConstraints)
+        NSLayoutConstraint.activate(ratingViewConstraints)
     }
     
-    func configure(with model: TitlePreviewViewModel){
-        titleLabel.text = model.title
-        overviewLabel.text = model.titleOverView
+    func configure(with model: MovieInfoModel){
+        titleLabel.text = model.detail?.title ?? model.detail?.originalTitle
+        overviewLabel.text = model.detail?.overview
+        let youtubeKey = model.video.first?.key ?? ""
         
-        guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else {return}
+        let intRatings = model.reviews.compactMap { $0.authorDetails?.rating }
+        let ratings = intRatings.map { Double($0) }
+        let averageRating = ratings.isEmpty ? 0.0 : ratings.reduce(0.0, +) / Double(ratings.count)
+        let stars = String(repeating: "⭐️", count: Int(averageRating))
+        starRatingLabel.text = "\(stars) (\(averageRating)/10)"
+        
+        guard let url = URL(string: "https://www.youtube.com/embed/\(youtubeKey)") else {return}
         
         webView.load(URLRequest(url: url))
     }

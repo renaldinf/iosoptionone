@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1444ED2A75435191A47B389D /* Pods_iostestone_iostestoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E24C6BF39364156DEF42743 /* Pods_iostestone_iostestoneUITests.framework */; };
+		5766A9812DC5262C00DADE17 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9672DC5262C00DADE17 /* GridViewController.swift */; };
+		5766A9822DC5262C00DADE17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9682DC5262C00DADE17 /* HomeViewController.swift */; };
+		5766A9832DC5262C00DADE17 /* MovieInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9692DC5262C00DADE17 /* MovieInfoController.swift */; };
+		5766A9842DC5262C00DADE17 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A96B2DC5262C00DADE17 /* APICaller.swift */; };
+		5766A9852DC5262C00DADE17 /* DetailMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A96D2DC5262C00DADE17 /* DetailMovieResponse.swift */; };
+		5766A9862DC5262C00DADE17 /* DiscoverMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A96E2DC5262C00DADE17 /* DiscoverMovieResponse.swift */; };
+		5766A9872DC5262C00DADE17 /* ReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A96F2DC5262C00DADE17 /* ReviewResponse.swift */; };
+		5766A9882DC5262C00DADE17 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9702DC5262C00DADE17 /* YoutubeSearchResponse.swift */; };
+		5766A9892DC5262C00DADE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9722DC5262C00DADE17 /* AppDelegate.swift */; };
+		5766A98A2DC5262C00DADE17 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9732DC5262C00DADE17 /* Extensions.swift */; };
+		5766A98B2DC5262C00DADE17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9742DC5262C00DADE17 /* SceneDelegate.swift */; };
+		5766A98C2DC5262C00DADE17 /* MovieInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9762DC5262C00DADE17 /* MovieInfoViewModel.swift */; };
+		5766A98E2DC5262C00DADE17 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A9792DC5262C00DADE17 /* CollectionViewTableViewCell.swift */; };
+		5766A98F2DC5262C00DADE17 /* PosterImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766A97A2DC5262C00DADE17 /* PosterImageCell.swift */; };
+		5766A9902DC5262C00DADE17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5766A97C2DC5262C00DADE17 /* Assets.xcassets */; };
+		5766A9922DC5262C00DADE17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5766A97F2DC5262C00DADE17 /* LaunchScreen.storyboard */; };
+		5766A9982DC52D2600DADE17 /* env.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5766A9972DC52D1D00DADE17 /* env.xcconfig */; };
 		D465A41F40B56A67573D1646 /* Pods_iostestoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C9FF23779E3D3FC2B3845F /* Pods_iostestoneTests.framework */; };
 		F183678E0CC791DB3B121688 /* Pods_iostestone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6CD9F9C2C205D2EE6B2BF2 /* Pods_iostestone.framework */; };
 /* End PBXBuildFile section */
@@ -38,21 +55,29 @@
 		570111042DC1C00800E1CC62 /* iostestone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iostestone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5701111A2DC1C00B00E1CC62 /* iostestoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iostestoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570111242DC1C00B00E1CC62 /* iostestoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iostestoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5766A9672DC5262C00DADE17 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		5766A9682DC5262C00DADE17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5766A9692DC5262C00DADE17 /* MovieInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoController.swift; sourceTree = "<group>"; };
+		5766A96B2DC5262C00DADE17 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		5766A96D2DC5262C00DADE17 /* DetailMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieResponse.swift; sourceTree = "<group>"; };
+		5766A96E2DC5262C00DADE17 /* DiscoverMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMovieResponse.swift; sourceTree = "<group>"; };
+		5766A96F2DC5262C00DADE17 /* ReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResponse.swift; sourceTree = "<group>"; };
+		5766A9702DC5262C00DADE17 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		5766A9722DC5262C00DADE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5766A9732DC5262C00DADE17 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5766A9742DC5262C00DADE17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5766A9762DC5262C00DADE17 /* MovieInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewModel.swift; sourceTree = "<group>"; };
+		5766A9792DC5262C00DADE17 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		5766A97A2DC5262C00DADE17 /* PosterImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageCell.swift; sourceTree = "<group>"; };
+		5766A97C2DC5262C00DADE17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5766A97D2DC5262C00DADE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5766A97E2DC5262C00DADE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5766A9972DC52D1D00DADE17 /* env.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.xcconfig; sourceTree = "<group>"; };
 		5F5415E5106B557FD8D45449 /* Pods-iostestone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone.debug.xcconfig"; path = "Target Support Files/Pods-iostestone/Pods-iostestone.debug.xcconfig"; sourceTree = "<group>"; };
 		8EDB5E847A433813970BBBA7 /* Pods-iostestone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone.release.xcconfig"; path = "Target Support Files/Pods-iostestone/Pods-iostestone.release.xcconfig"; sourceTree = "<group>"; };
 		BFF42E6A012BE981A1C56B0E /* Pods-iostestone-iostestoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone-iostestoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-iostestone-iostestoneUITests/Pods-iostestone-iostestoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6CD9F9C2C205D2EE6B2BF2 /* Pods_iostestone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostestone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5766A85D2DC4037200DADE17 /* Exceptions for "iostestone" folder in "iostestone" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 570111032DC1C00800E1CC62 /* iostestone */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5701111D2DC1C00B00E1CC62 /* iostestoneTests */ = {
@@ -63,14 +88,6 @@
 		570111272DC1C00B00E1CC62 /* iostestoneUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = iostestoneUITests;
-			sourceTree = "<group>";
-		};
-		5766A8432DC4037200DADE17 /* iostestone */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5766A85D2DC4037200DADE17 /* Exceptions for "iostestone" folder in "iostestone" target */,
-			);
-			path = iostestone;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -119,7 +136,7 @@
 		570110FB2DC1C00800E1CC62 = {
 			isa = PBXGroup;
 			children = (
-				5766A8432DC4037200DADE17 /* iostestone */,
+				5766A9802DC5262C00DADE17 /* iostestone */,
 				5701111D2DC1C00B00E1CC62 /* iostestoneTests */,
 				570111272DC1C00B00E1CC62 /* iostestoneUITests */,
 				570111052DC1C00800E1CC62 /* Products */,
@@ -136,6 +153,71 @@
 				570111242DC1C00B00E1CC62 /* iostestoneUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5766A96A2DC5262C00DADE17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5766A9672DC5262C00DADE17 /* GridViewController.swift */,
+				5766A9682DC5262C00DADE17 /* HomeViewController.swift */,
+				5766A9692DC5262C00DADE17 /* MovieInfoController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5766A96C2DC5262C00DADE17 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5766A96B2DC5262C00DADE17 /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5766A9712DC5262C00DADE17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5766A96D2DC5262C00DADE17 /* DetailMovieResponse.swift */,
+				5766A96E2DC5262C00DADE17 /* DiscoverMovieResponse.swift */,
+				5766A96F2DC5262C00DADE17 /* ReviewResponse.swift */,
+				5766A9702DC5262C00DADE17 /* YoutubeSearchResponse.swift */,
+				5766A9762DC5262C00DADE17 /* MovieInfoViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5766A9752DC5262C00DADE17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5766A9722DC5262C00DADE17 /* AppDelegate.swift */,
+				5766A9732DC5262C00DADE17 /* Extensions.swift */,
+				5766A9742DC5262C00DADE17 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5766A97B2DC5262C00DADE17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5766A9792DC5262C00DADE17 /* CollectionViewTableViewCell.swift */,
+				5766A97A2DC5262C00DADE17 /* PosterImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5766A9802DC5262C00DADE17 /* iostestone */ = {
+			isa = PBXGroup;
+			children = (
+				5766A9972DC52D1D00DADE17 /* env.xcconfig */,
+				5766A96A2DC5262C00DADE17 /* Controllers */,
+				5766A96C2DC5262C00DADE17 /* Managers */,
+				5766A9712DC5262C00DADE17 /* Models */,
+				5766A9752DC5262C00DADE17 /* Resources */,
+				5766A97B2DC5262C00DADE17 /* Views */,
+				5766A97C2DC5262C00DADE17 /* Assets.xcassets */,
+				5766A97D2DC5262C00DADE17 /* Info.plist */,
+				5766A97F2DC5262C00DADE17 /* LaunchScreen.storyboard */,
+			);
+			path = iostestone;
 			sourceTree = "<group>";
 		};
 		A2A794866B52E87245C615C3 /* Frameworks */ = {
@@ -164,9 +246,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				5766A8432DC4037200DADE17 /* iostestone */,
 			);
 			name = iostestone;
 			productName = iostestone;
@@ -268,6 +347,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5766A9902DC5262C00DADE17 /* Assets.xcassets in Resources */,
+				5766A9922DC5262C00DADE17 /* LaunchScreen.storyboard in Resources */,
+				5766A9982DC52D2600DADE17 /* env.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +494,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5766A9812DC5262C00DADE17 /* GridViewController.swift in Sources */,
+				5766A9822DC5262C00DADE17 /* HomeViewController.swift in Sources */,
+				5766A9832DC5262C00DADE17 /* MovieInfoController.swift in Sources */,
+				5766A9842DC5262C00DADE17 /* APICaller.swift in Sources */,
+				5766A9852DC5262C00DADE17 /* DetailMovieResponse.swift in Sources */,
+				5766A9862DC5262C00DADE17 /* DiscoverMovieResponse.swift in Sources */,
+				5766A9872DC5262C00DADE17 /* ReviewResponse.swift in Sources */,
+				5766A9882DC5262C00DADE17 /* YoutubeSearchResponse.swift in Sources */,
+				5766A9892DC5262C00DADE17 /* AppDelegate.swift in Sources */,
+				5766A98A2DC5262C00DADE17 /* Extensions.swift in Sources */,
+				5766A98B2DC5262C00DADE17 /* SceneDelegate.swift in Sources */,
+				5766A98C2DC5262C00DADE17 /* MovieInfoViewModel.swift in Sources */,
+				5766A98E2DC5262C00DADE17 /* CollectionViewTableViewCell.swift in Sources */,
+				5766A98F2DC5262C00DADE17 /* PosterImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +539,17 @@
 			targetProxy = 570111252DC1C00B00E1CC62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5766A97F2DC5262C00DADE17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5766A97E2DC5262C00DADE17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5701112E2DC1C00B00E1CC62 /* Debug */ = {

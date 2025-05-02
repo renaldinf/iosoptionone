@@ -1,49 +1,7 @@
 import UIKit
-import XLPagerTabStrip
-
-class MainScreen: UIViewController{
-    private var discoverMovies: [DiscoverMovieResult]?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .systemBackground
-        
-        let gridLayout = UICollectionViewFlowLayout()
-        let gridVC = GridViewController(collectionViewLayout: gridLayout)
-        
-        configureNavbar()
-        
-        APICaller.shared.getDiscoverMovies(with: 1) { data in
-            switch data {
-            case .success(let results):
-                gridVC.setMovies(results)
-
-                self.addChild(gridVC)
-//                gridVC.view.frame = self.view.bounds
-                self.view.addSubview(gridVC.view)
-                gridVC.didMove(toParent: self)
-            case .failure(let error):
-                print("Failed getDiscoverMovies \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    private func configureNavbar(){
-        
-        var image = UIImage(named: "netflixLogo")
-        image = image?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-        
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
-            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
-        ]
-        navigationController?.navigationBar.tintColor = .white
-    }
-}
 
 class GridViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    weak var delegate: CollectionViewTableViewCellDelegate?
     var movies: [DiscoverMovieResult] = []
     var isLoadingMore = false
     var nextPage = 1
@@ -81,7 +39,7 @@ class GridViewController: UICollectionViewController, UICollectionViewDelegateFl
         if position > contentHeight - scrollViewHeight - 100 {
             guard !isLoadingMore else { return }
             isLoadingMore = true
-
+            
             // Panggil API untuk load data berikutnya
             loadMoreData()
         }
@@ -102,7 +60,7 @@ class GridViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    
+        
         return movies.count
     }
     
@@ -129,5 +87,72 @@ class GridViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let movie = movies[indexPath.row]
+        guard let id = movie.id else {return}
+        guard let titleName = movie.title  ?? movie.originalTitle else {return}
+        
+        let group = DispatchGroup()
+        var movieDetail: DetailMovieResponse?
+        var movieVideos: [YoutubeSearchResult] = []
+        var movieReviews: [ReviewResult] = []
+        
+        let loadingIndicator = UIActivityIndicatorView(style: .large)
+        loadingIndicator.center = view.center
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
+        
+        group.enter()
+        APICaller.shared.getDetailsMovie(with: id) { result in
+            switch result {
+            case .success(let detail):
+                movieDetail = detail
+            case .failure(let error):
+                print("Detail error:", error)
+            }
+            group.leave()
+        }
+        
+        group.enter()
+        APICaller.shared.getYoutubeTrailer(with: id) { result in
+            switch result {
+            case .success(let videos):
+                movieVideos = videos.results ?? []
+            case .failure(let error):
+                print("Videos error:", error)
+            }
+            group.leave()
+        }
+        
+        group.enter()
+        APICaller.shared.getMovieReview(with: id) { result in
+            switch result {
+            case .success(let reviews):
+                movieReviews = reviews.results ?? []
+            case .failure(let error):
+                print("Reviews error:", error)
+            }
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            loadingIndicator.stopAnimating()
+            loadingIndicator.removeFromSuperview()
+            
+            //                guard let strongSelf = self else {return}
+            let viewModel = MovieInfoModel(detail: movieDetail, video: movieVideos, reviews: movieReviews)
+            //                self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)
+            DispatchQueue.main.async { [weak self] in
+                loadingIndicator.stopAnimating()
+                loadingIndicator.removeFromSuperview()
+                let vc = MovieInfoController()
+                vc.configure(with: viewModel)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 }
