@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1444ED2A75435191A47B389D /* Pods_iostestone_iostestoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E24C6BF39364156DEF42743 /* Pods_iostestone_iostestoneUITests.framework */; };
+		D465A41F40B56A67573D1646 /* Pods_iostestoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C9FF23779E3D3FC2B3845F /* Pods_iostestoneTests.framework */; };
+		F183678E0CC791DB3B121688 /* Pods_iostestone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6CD9F9C2C205D2EE6B2BF2 /* Pods_iostestone.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5701111B2DC1C00B00E1CC62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,13 +30,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CFDFAEEE2D25BEC60B7B811 /* Pods-iostestone-iostestoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone-iostestoneUITests.release.xcconfig"; path = "Target Support Files/Pods-iostestone-iostestoneUITests/Pods-iostestone-iostestoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0E24C6BF39364156DEF42743 /* Pods_iostestone_iostestoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostestone_iostestoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1FA8B9192984F0AE7C48F7 /* Pods-iostestoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestoneTests.release.xcconfig"; path = "Target Support Files/Pods-iostestoneTests/Pods-iostestoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		36A13FAAA8999261802A189C /* Pods-iostestoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestoneTests.debug.xcconfig"; path = "Target Support Files/Pods-iostestoneTests/Pods-iostestoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44C9FF23779E3D3FC2B3845F /* Pods_iostestoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostestoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570111042DC1C00800E1CC62 /* iostestone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iostestone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5701111A2DC1C00B00E1CC62 /* iostestoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iostestoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570111242DC1C00B00E1CC62 /* iostestoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iostestoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5415E5106B557FD8D45449 /* Pods-iostestone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone.debug.xcconfig"; path = "Target Support Files/Pods-iostestone/Pods-iostestone.debug.xcconfig"; sourceTree = "<group>"; };
+		8EDB5E847A433813970BBBA7 /* Pods-iostestone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone.release.xcconfig"; path = "Target Support Files/Pods-iostestone/Pods-iostestone.release.xcconfig"; sourceTree = "<group>"; };
+		BFF42E6A012BE981A1C56B0E /* Pods-iostestone-iostestoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestone-iostestoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-iostestone-iostestoneUITests/Pods-iostestone-iostestoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD6CD9F9C2C205D2EE6B2BF2 /* Pods_iostestone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostestone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5701112C2DC1C00B00E1CC62 /* Exceptions for "iostestone" folder in "iostestone" target */ = {
+		5766A85D2DC4037200DADE17 /* Exceptions for "iostestone" folder in "iostestone" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -40,14 +55,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		570111062DC1C00800E1CC62 /* iostestone */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5701112C2DC1C00B00E1CC62 /* Exceptions for "iostestone" folder in "iostestone" target */,
-			);
-			path = iostestone;
-			sourceTree = "<group>";
-		};
 		5701111D2DC1C00B00E1CC62 /* iostestoneTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = iostestoneTests;
@@ -58,6 +65,14 @@
 			path = iostestoneUITests;
 			sourceTree = "<group>";
 		};
+		5766A8432DC4037200DADE17 /* iostestone */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5766A85D2DC4037200DADE17 /* Exceptions for "iostestone" folder in "iostestone" target */,
+			);
+			path = iostestone;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F183678E0CC791DB3B121688 /* Pods_iostestone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D465A41F40B56A67573D1646 /* Pods_iostestoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,19 +96,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1444ED2A75435191A47B389D /* Pods_iostestone_iostestoneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EB82ED144C0D8CB55FEB4A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F5415E5106B557FD8D45449 /* Pods-iostestone.debug.xcconfig */,
+				8EDB5E847A433813970BBBA7 /* Pods-iostestone.release.xcconfig */,
+				BFF42E6A012BE981A1C56B0E /* Pods-iostestone-iostestoneUITests.debug.xcconfig */,
+				0CFDFAEEE2D25BEC60B7B811 /* Pods-iostestone-iostestoneUITests.release.xcconfig */,
+				36A13FAAA8999261802A189C /* Pods-iostestoneTests.debug.xcconfig */,
+				2C1FA8B9192984F0AE7C48F7 /* Pods-iostestoneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		570110FB2DC1C00800E1CC62 = {
 			isa = PBXGroup;
 			children = (
-				570111062DC1C00800E1CC62 /* iostestone */,
+				5766A8432DC4037200DADE17 /* iostestone */,
 				5701111D2DC1C00B00E1CC62 /* iostestoneTests */,
 				570111272DC1C00B00E1CC62 /* iostestoneUITests */,
 				570111052DC1C00800E1CC62 /* Products */,
+				0EB82ED144C0D8CB55FEB4A7 /* Pods */,
+				A2A794866B52E87245C615C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +138,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A2A794866B52E87245C615C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD6CD9F9C2C205D2EE6B2BF2 /* Pods_iostestone.framework */,
+				0E24C6BF39364156DEF42743 /* Pods_iostestone_iostestoneUITests.framework */,
+				44C9FF23779E3D3FC2B3845F /* Pods_iostestoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,20 +155,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5701112D2DC1C00B00E1CC62 /* Build configuration list for PBXNativeTarget "iostestone" */;
 			buildPhases = (
+				E043E8A9E8DEE309F3CA8A6E /* [CP] Check Pods Manifest.lock */,
 				570111002DC1C00800E1CC62 /* Sources */,
 				570111012DC1C00800E1CC62 /* Frameworks */,
 				570111022DC1C00800E1CC62 /* Resources */,
+				89EC63FD3E9AA1673EED5A65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				570111062DC1C00800E1CC62 /* iostestone */,
+				5766A8432DC4037200DADE17 /* iostestone */,
 			);
 			name = iostestone;
-			packageProductDependencies = (
-			);
 			productName = iostestone;
 			productReference = 570111042DC1C00800E1CC62 /* iostestone.app */;
 			productType = "com.apple.product-type.application";
@@ -134,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 570111322DC1C00B00E1CC62 /* Build configuration list for PBXNativeTarget "iostestoneTests" */;
 			buildPhases = (
+				CCFFB160EDC58127462482A8 /* [CP] Check Pods Manifest.lock */,
 				570111162DC1C00B00E1CC62 /* Sources */,
 				570111172DC1C00B00E1CC62 /* Frameworks */,
 				570111182DC1C00B00E1CC62 /* Resources */,
+				501628EA3F03A743D2260D1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,8 +192,6 @@
 				5701111D2DC1C00B00E1CC62 /* iostestoneTests */,
 			);
 			name = iostestoneTests;
-			packageProductDependencies = (
-			);
 			productName = iostestoneTests;
 			productReference = 5701111A2DC1C00B00E1CC62 /* iostestoneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 570111352DC1C00B00E1CC62 /* Build configuration list for PBXNativeTarget "iostestoneUITests" */;
 			buildPhases = (
+				567BBF55A6A6772A349572E7 /* [CP] Check Pods Manifest.lock */,
 				570111202DC1C00B00E1CC62 /* Sources */,
 				570111212DC1C00B00E1CC62 /* Frameworks */,
 				570111222DC1C00B00E1CC62 /* Resources */,
+				3A48FD77AD74B5F3600B5A5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,8 +215,6 @@
 				570111272DC1C00B00E1CC62 /* iostestoneUITests */,
 			);
 			name = iostestoneUITests;
-			packageProductDependencies = (
-			);
 			productName = iostestoneUITests;
 			productReference = 570111242DC1C00B00E1CC62 /* iostestoneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -244,6 +287,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A48FD77AD74B5F3600B5A5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostestone-iostestoneUITests/Pods-iostestone-iostestoneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostestone-iostestoneUITests/Pods-iostestone-iostestoneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iostestone-iostestoneUITests/Pods-iostestone-iostestoneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		501628EA3F03A743D2260D1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostestoneTests/Pods-iostestoneTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostestoneTests/Pods-iostestoneTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iostestoneTests/Pods-iostestoneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		567BBF55A6A6772A349572E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iostestone-iostestoneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89EC63FD3E9AA1673EED5A65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostestone/Pods-iostestone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostestone/Pods-iostestone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iostestone/Pods-iostestone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCFFB160EDC58127462482A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iostestoneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E043E8A9E8DEE309F3CA8A6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iostestone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		570111002DC1C00800E1CC62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,17 +447,18 @@
 /* Begin XCBuildConfiguration section */
 		5701112E2DC1C00B00E1CC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F5415E5106B557FD8D45449 /* Pods-iostestone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 774FS6FR6L;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iostestone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,17 +476,18 @@
 		};
 		5701112F2DC1C00B00E1CC62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EDB5E847A433813970BBBA7 /* Pods-iostestone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 774FS6FR6L;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iostestone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -375,7 +540,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -438,7 +603,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -459,6 +624,7 @@
 		};
 		570111332DC1C00B00E1CC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A13FAAA8999261802A189C /* Pods-iostestoneTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +644,7 @@
 		};
 		570111342DC1C00B00E1CC62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C1FA8B9192984F0AE7C48F7 /* Pods-iostestoneTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -497,6 +664,7 @@
 		};
 		570111362DC1C00B00E1CC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF42E6A012BE981A1C56B0E /* Pods-iostestone-iostestoneUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -514,6 +682,7 @@
 		};
 		570111372DC1C00B00E1CC62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CFDFAEEE2D25BEC60B7B811 /* Pods-iostestone-iostestoneUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
